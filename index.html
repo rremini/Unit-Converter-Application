@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Unit Conversions</title>
+  </head>
+  <body>
+    <section id="home">
+      <header><b>Unit Conversions</b></header>
+      <nav>
+        <div class="nav-container"> 
+          <a href="#temperature"
+            ><button class="nav-item" type="button">Temperature</button></a
+          >
+          <a href="#weight"
+            ><button class="nav-item" type="button">Weight</button></a
+          >
+          <a href="#distance"
+            ><button class="nav-item" type="button">Distance</button></a
+          >
+        </div>
+      </nav>
+    </section>
+
+    <div id="all-conversion-sections">
+      <section id="temperature" class="converter-card temperature">
+        <div id="tmp">
+          <figure>
+            <img src="./assets/thermometer.png" width="200" alt="thermometer" />
+            <figcaption>Celsius to Fahrenheit Conversion</figcaption>
+          </figure>
+
+          <article>
+            <fieldset>
+              <legend>Temperature</legend>
+
+              <label for="celsius">Celsius</label><br />
+              <input type="number" id="celsius"/><br />
+
+              <button type="button" class="convert-btn" onclick="temperature()">
+                Convert</button
+              ><br/>
+
+              <label for="fahrenheit">Fahrenheit</label><br />
+              <input type="number" id="fahrenheit" readonly />
+            </fieldset>
+          </article>
+
+          <aside>
+            To convert celsuis to fahrenheit yourself, use this formula
+            replacing the C' with your temperature in celsuis: (C x 9/5) + 32
+          </aside>
+        </div>
+      </section>
+      <section id="weight" class="converter-card weight">
+        <div id="wgt">
+          <figure>
+            <img src="./assets/weight.png" width="200" alt="weight" />
+            <figcaption>Kilograms to Pounds Conversion</figcaption>
+          </figure>
+
+          <article class="input-panel">
+            <fieldset>
+              <legend>Weight</legend>
+
+              <label for="kilo">Kilograms</label><br/>
+              <input type="number" id="kilo"/><br/>
+
+              <button type="button" class="convert-btn" onclick="weight()">
+                Convert</button
+              ><br/>
+
+              <label for="pounds">Pounds</label><br />
+              <input type="number" id="pounds" readonly />
+            </fieldset>
+          </article>
+
+          <aside>
+            To convert kilograms to pounds yourself, use this formula replacing
+            the `kg' with your weight in kilograms: kg x 2.205
+          </aside>
+        </div>
+      </section>
+      <section id="distance" class="converter-card distance">
+        <div id="dst">
+          <figure>
+            <img src="./assets/distance.png" width="200" alt="speedometer" />
+            <figcaption>Kilometer to Mile Conversion</figcaption>
+          </figure>
+
+          <article class="input-panel">
+            <fieldset>
+              <legend>Distance</legend>
+
+              <label for="km">Kilometers</label><br />
+              <input type="number" id="km" /><br />
+
+              <button type="button" class="convert-btn" onclick="distance()">
+                Convert</button
+              ><br />
+
+              <label for="miles">Miles</label><br />
+              <input type="number" id="miles" readonly />
+            </fieldset>
+          </article>
+          <aside>
+            To convert kilometers to miles yourself, use this formula replacing
+            the `km` with your distance in kilmeters: km ÷ 1.609
+          </aside>
+        </div>
+      </section>
+    </div>
+
+    <div id="go-home" class="floating-home-btn">
+      <a href="#home" aria-label="Go to top">
+        <img src="./assets/home-icon.svg" alt="home" />
+      </a>
+    </div>
+
+    <footer>
+      Learn more about HTML/CSS/JS as a part of INT250 CSS Framework
+    </footer>
+  </body>
+</html>
